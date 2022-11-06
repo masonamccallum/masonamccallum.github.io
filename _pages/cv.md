@@ -8,7 +8,10 @@ redirect_from:
 ---
 
 {% include base_path %}
+PDF copy
+======
 [CV](resume.pdf)
+
 Education
 ======
 * B.S. in Mathematics, Tarleton State University, 2017-2020 
