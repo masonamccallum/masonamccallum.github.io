@@ -8,33 +8,66 @@ redirect_from:
 ---
 
 {% include base_path %}
-
+[CV](resume.pdf)
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. in Mathematics, Tarleton State University, 2017-2020 
+* B.S. in Computer Science, Tarleton State University, 2017-2020 
+* M.S. in Computational and Applied Mathematics, Southern Methodist University, 2021-Present
+* Ph.D. in Computational and Applied Mathematics, Southern Methodist University, 2021-Present
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Present: Research Assistant
+  * Modeling topological insulators using Discontinuous Galerkin Methods
+  * Southern Methodist University
+  * Supervisor: Thomas Hagstrom
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* 2019-2021: Research Assistant
+  * Texas A&M Agrilife 
+  * Duties included: Classification of microbial communities 
+  * Supervisor: Jeffrey A. Brady 
+
+* Summer 2019: Data Analyst Intern 
+  * BurlingtonNorthern Sante Fe 
+  * Duties included: ........ 
+
+Graduate Course Work
+======
+* Partial Differential Equations
+* Dynamical Systems I&II
+* Numerical Methods I&II
+* Real Analysis
+* Finite Elements
+* Simulations and the Monte Carlo Method
+* Perturbation Methods 
+* Applied Stochastic Differential Equations
+* Photonics
+
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Programming Languages
+  * Julia
+  * C/C++
+  * Python
+
+* Dev tools 
+  * MPI
+  * OpenMP
+  * CUDA
+  * Kokkos
+  * CI/CD
+  * Docker
+  * Ubuntu 
+  * Git 
+  * Vim 
+* Database
+  * SQL
+  * Postgres
+  * SQLite
+
+
 
 Publications
 ======
@@ -53,7 +86,8 @@ Teaching
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+
+
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams
