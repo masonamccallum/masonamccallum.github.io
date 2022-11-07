@@ -1,7 +1,12 @@
 ---
+layout: single
 title: Recommended Reading List 
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-collection: portfolio
+header:
+  teaser: "unsplash-gallery-image-2-th.jpg"
+categories: 
+  - Jekyll
+tags:
+  - edge case
 ---
 
 ## Mathematics
