@@ -1,0 +1,116 @@
+
+---
+title: Dynamical Systems Review 
+excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+collection: portfolio
+---
+<div>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+</div>
+
+# Bifurcations
+We seek to better understand the dynamics of a system in phase space. A bifurcation occurs when a change in state variables leads to a change in stability in the system. This section aims to summarize the fundamental bifurcations caused by these changes. We will look at the perturbation of such parameters to explore such changes.
+[Lecture notes](http://people.math.sfu.ca/~ralfw/math467f03/lectures/ch8.pdf)
+
+<iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/oqKAVqe71vw"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen></iframe>
+
+Textbook Reference: Strogatz Nonlinear Dynamics and Chaos Pg.244-255
+
+## Saddle-Node Bifurcation 
+[wiki page](https://en.wikipedia.org/wiki/saddle-node_bifurcation)<br>
+the prototypical example in two dimensions:
+<div>
+\begin{align*}
+	&\dot{x}=\mu-x^2\\
+	&\dot{y}=-y\\
+\end{align*}
+</div>
+## Transcritical
+[wiki page](https://en.wikipedia.org/wiki/Transcritical_bifurcation)<br>
+the prototypical example in two dimensions:
+<div>
+\begin{align*}
+	&\dot{x}=\mu x-x^2\\
+	&\dot{y}=-y\\
+\end{align*}
+</div>
+## Pitchfork
+[wiki page](https://en.wikipedia.org/wiki/Pitchfork_bifurcation)<br>
+Example of supercritical pitchfork:
+<div>
+\begin{align*}
+	&\dot{x}=\mu x-x^3\\
+	&\dot{y}=-y\\
+\end{align*}
+</div>
+Example of subcritical pitchfork:
+<div>
+\begin{align*}
+	&\dot{x}=\mu x+x^3\\
+	&\dot{y}=-y\\
+\end{align*}
+</div>
+## Hopf
+[wiki page](https://en.wikipedia.org/wiki/Hopf_bifurcation)<br>
+## Discussion questions
+- What qualitative properties of these equations lead to the fixed point behavior?
+- What does the jacobian tell us about these problems?
+- What does the Hartman-Grobman theorem state?
+- Eigenvalues seem removed from the differential equations stated in these problems. Make the connection between these differential equations and eigenvalues and eigenvectors.
+- What behavior of the eigenvalues distinguishes the first three bifurcations from a hopf bifurcation?
+
+## Practice problems
+Strogatz book:
+6.1.2, 6.1.3, 8.1.1, 8.1.6, 8.2.3, 8.2.6, 8.2.8, 8.4.2<br>
+[Solutions](https://www.sfu.ca/~van/teaching/Math-467/Spring15/homeworks/hw7sol.pdf)
+
+# Limit Cycles 
+As we increase the dimensionality of our dynamical systems we find that new structures can form beyond fixed points. Stable closed curves that have specific stability behavior are known as limit cycles. This section reguards the proofs nessesary to identify, classify, and show existence of such curves.
+<iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/nWO74rlr58Y"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen></iframe>
+### Gradient Systems
+Suppose a system can be written in the form $$\dot{x}=-\nabla V$$. For some continuously differentiable, single values scaler function V(\vec{x}). This is known as a gradient system with a potential function V. Firstly a closed orbit is not possible in such systems. Consider Example 7.2.1 from the strogatz book. $$\dot{x}=sin(y)\;\;\;\dot{y}=xcos(y)$$
+<div>
+\begin{align*}
+&V(x,y)=-xsin(y)\\
+&\dot{x}=-\frac{\partial V}{\partial x}\\
+&\dot{y}=-\frac{\partial V}{\partial y}\\
+\end{align*}
+</div>
+
+### Liapunov Functions
+Here is another tool to show that closed orbits dont exists.
+Consider the dynamical system $$\dot{\vec{x}}=f(\vec{x})$$ and fixed point $$\vec{x}^*$$. Now suppose we can find a function V(x) with the following properties.
+- $$V(\vec{x})>0$$ for all $$\vec{x}\neq\vec{x}^*$$ and $$V(\vec{x}^*)=0$$
+- $$\dot{V}(\vec{x})<0$$ for all $$\vec{x}\neq\vec{x}^*$$
+
+### Dulac's Criterion
+Let $$\dot{\vec{x}}=f(\vec{x})$$ be a sufficiently smooth vector field that is defined on a simply connected subset R of the plane. If there exists a smooth function g(x) such that $$\nabla\cdot(g \dot{\vec{x}})$$ is sign definite then no closed orbit lies entirely in this region. There is a proof outline in the book on page 204 that captures the intuition of this criterion.
+
+### Poincare-Bendixson Theorem
+This is a method used to show that a limit cycle does exist in a region.  
+- Suppose that R is a closed bounded subset of the plane 
+- $$\dot{\vec{x}}=f(x)$$ is a continuously differentiable vector field on an open set containing R$$
+- R does not contain any fixed points
+- There exists a trajectory C that is trapped in R. Such a trajectory starts in R and remains in R for all time.
+
+These four conditions are sufficient to show that a limit cycle lies within the region R. The first three are simple enough to show however the last is trickier. The trick is to construct a trapping region R that is topologically like a donut. Then on the boundaries of this donut we must show the vector field points into this "trapping region". I think this will best be shown with examples.
+
+### Discussion questions
+- Give an intuitive description of Liapunov functions
+- Examples are often in 2d systems because of the complex nature of these problems. Read and discuss the implications of these theorems in higher dimension.
+
+### Practice problems
+Strogatz book: $$7.1.5^*$$, $$7.2.9^*$$, 7.2.9, 7.2.10,7.2.12, $$7.3.1^*$$, $$7.3.6^*$$
+
