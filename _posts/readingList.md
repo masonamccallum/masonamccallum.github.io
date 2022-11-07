@@ -7,6 +7,7 @@ categories:
   - Jekyll
 tags:
   - edge case
+collection: posts
 ---
 
 ## Mathematics
