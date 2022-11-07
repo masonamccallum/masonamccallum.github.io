@@ -8,9 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-PDF copy
-======
-[CV](resume.pdf)
+[PDF copy](resume.pdf)
 
 Education
 ======
