@@ -133,8 +133,7 @@ When we add is the SI Disease we add the following assumptions.
 	
 When we solve this system for equilibrium we find 6 such points quickly using Mathematica. However we notice that one of those has strictly negative predator population and is therefore excluded from our analysis.
 
-<iframe width='95%' height='550' src='https://www.wolframcloud.com/obj/9e2b0fd6-8903-4f6c-92dc-9a3de5d305ad' frameborder='0'></iframe>
-
+<iframe width='800' height='400' src='https://www.wolframcloud.com/obj/186ddde1-9767-48f1-b4da-d46d3d76f6d6' frameborder='0'></iframe>
 
 #### Extinction equilibrium
 <div>	
