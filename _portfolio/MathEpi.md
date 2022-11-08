@@ -8,8 +8,8 @@ author: Mason A. McCallum
 
 <div>
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-	<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-	</script>
+	<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+	<script crossorigin src="https://unpkg.com/wolfram-notebook-embedder@0.3/dist/wolfram-notebook-embedder.min.js"></script>
 </div>
 
 I will start with a simple disease model to introduce some key terms.
@@ -133,7 +133,7 @@ When we add is the SI Disease we add the following assumptions.
 	
 When we solve this system for equilibrium we find 6 such points quickly using Mathematica. However we notice that one of those has strictly negative predator population and is therefore excluded from our analysis.
 
-<iframe width='800' height='400' src='https://www.wolframcloud.com/obj/186ddde1-9767-48f1-b4da-d46d3d76f6d6' frameborder='0'></iframe>
+<iframe width='800' height='400' src='https://www.wolframcloud.com/obj/1bd22d8b-3e04-4f76-a3de-5cd4d77803ed' frameborder='0'></iframe>
 
 #### Extinction equilibrium
 <div>	
