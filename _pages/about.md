@@ -12,6 +12,8 @@ Hello!!
 ----
 enter intro paragraph here.....
 
+<img src="https://ghchart.rshah.org/masonamccallum" alt="2022rshah's Github chart" />
+
 Current research insterests
 ----
 
