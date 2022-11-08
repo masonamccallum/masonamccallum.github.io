@@ -8,11 +8,10 @@ redirect_from:
   - /about.html
 ---
 
-Hello!!
+About
 ----
 enter intro paragraph here.....
 
-<img src="https://ghchart.rshah.org/masonamccallum" alt="2022rshah's Github chart" />
 
 Current research insterests
 ----
@@ -20,3 +19,7 @@ Current research insterests
 Personal
 ----
 Hobbies, reading list, boardgames, resturants
+
+Open Source contributions
+----
+<img src="https://ghchart.rshah.org/masonamccallum" alt="2022rshah's Github chart" />
