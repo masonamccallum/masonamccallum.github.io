@@ -75,7 +75,7 @@ To better understand the behavior of this system lets look at stability conditio
 	\end{align*}
 </div>
 	
-<iframe src="https://www.desmos.com/calculator/7jigvs9stp" style="min-height:300px" width="80%"></iframe> 
+<iframe src="https://www.desmos.com/calculator/7jigvs9stp" style="min-height:300px" width="100%"></iframe> 
 
 # What is $$\mathscr{R}_0$$?
 From the system above we had a term $$\mathscr{R}_{0}=\frac{\beta\Lambda}{\mu(\alpha+\mu)}$$. This is known as the reproduction number of the disease. This term is one you commonly see on the media because it is a key estimate of contagiousness that is a function of human behavior and biological characteristics of pathogens[1]. This is defined as the number of secondary infections that one infective host may produce in a population of susceptible host individuals. I need to introduce a term often used in chemistry known as the law of mass action. In epidimiology this means that the rate of disease transmission if proportional to the product of the number of individuals. In the system above you can see that $$\beta I S$$ is the mass action term in our equation. Now Notice that from the system $$\alpha+\mu$$ is the rate that individuals leave the infective class. Therefore $$\frac{1}{\alpha+\mu}$$ is the average time an individual spends in the infective class. Now condiser the case where we have one individual and the rest are suseptible individuals. Our Law of mass action states that 
