@@ -15,7 +15,7 @@ I am currently a PhD student at Southern Methodist University in the Computation
 
 Current research insterests
 ----
-I am currently using Discontinuous Galerkin Methods to simulate topologically protected interface waves (See my post to learn more).
+I am currently using Discontinuous Galerkin Methods to simulate topologically protected interface waves.
 
 <!--
 Open Source contributions
