@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-[PDF copy](/files/resume.pdf)
+<a href="masonamccallum.github.io/files/resume.pdf" target="_blank"> PDF copy </a>
 
 Education
 ======
