@@ -8,7 +8,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Mason A. McCallum / Personal Website"
+title                    : "Mason A. McCallum"
 title_separator          : "-"
 name                     : &name "Mason McCallum"
 description              : &description "personal description"
