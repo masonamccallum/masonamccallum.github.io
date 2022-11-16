@@ -7,7 +7,7 @@ redirect_from:
   - /resume
 ---
 
-<a href="masonamccallum.github.io/files/resume.pdf" target="_blank"> PDF copy </a>
+<a href="https://masonamccallum.github.io/files/resume.pdf" target="_blank"> PDF copy </a>
 
 Education
 ======
