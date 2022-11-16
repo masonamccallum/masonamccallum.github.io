@@ -7,7 +7,6 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
 <a href="masonamccallum.github.io/files/resume.pdf" target="_blank"> PDF copy </a>
 
 Education
