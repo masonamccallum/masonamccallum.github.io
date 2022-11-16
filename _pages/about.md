@@ -17,10 +17,12 @@ Current research insterests
 ----
 I am currently using Discontinuous Galerkin Methods to simulate topologically protected interface waves (See my post to learn more).
 
+<!--
 Open Source contributions
 ----
 My current Open source engagment is with the package [StartUpDG](https://github.com/jlchan/StartUpDG.jl.git) created by Jesse Chan from Rice university. 
 <img src="https://ghchart.rshah.org/masonamccallum" alt="2022rshah's Github chart" />
+-->
 
 Personal
 ----
