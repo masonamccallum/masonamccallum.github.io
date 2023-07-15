@@ -8,13 +8,13 @@ date: 2023-07-14
 location: "Dallas, Texas"
 ---
 
-![XKCD Git](https://imgs.xkcd.com/comics/git_2x.png)
+<img src="https://imgs.xkcd.com/comics/git_2x.png" alt="XKCD Git" width="200"/>
 
-## Related Resources
-- **Attend talk**: Here the goal is to set up the mental model for new users and introduce new tools for experienced users
+## Attend the Talk 
+    - Here the goal is to set up the mental model for new users and introduce new tools for experienced users
     - If the command line interface is not for you, try GitKraken: [GitKraken Website](https://www.gitkraken.com)
     - [Introduction to GitHub](https://github.com/skills/introduction-to-github)
-    - GitKraken/CLI demo
+    - GitKraken/CLI demo | I will use the CLI in GitKraken. I think this will be a helpful learning tool.
 
 ## Cool GitHub Projects to Look At
 - [Oceananigans.jl](https://github.com/CliMA/Oceananigans.jl)
@@ -38,5 +38,6 @@ location: "Dallas, Texas"
 - Test-Driven Development
 - Continuous Integration
 - github Gist
-- $tig
-- 'git reflog'
+- '$tig'
+- '$git reflog'
+- [gh CLI](https://cli.github.com/manual/gh)
