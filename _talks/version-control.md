@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 permalink: /talks/version-control
 venue: "Southern Methodist University, Department of Mathematics"
-date: 07-14-2023
+date: 2023-07-14
 location: "Dallas, Texas"
 ---
 
