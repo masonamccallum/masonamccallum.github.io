@@ -27,7 +27,7 @@ It is my belief that version control will vastly improve the reach and efficienc
 
 ## After Talk | Complete 1 and either 2 or 3
 1. Look through the cool GitHub projects mentioned below.
-2. Watch: [GitHub Tutorial for Beginners](https://www.youtube.com/watch?v=lG90LZotrpo).
+2. Watch: [GitHub Tutorial for Beginners](https://www.youtube.com/watch?v=MJUJ4wbFm_A).
 3. Read Chapter 1-3 and 7 of [Pro Git](https://git-scm.com/book/en/v2).
 
 ## Cool GitHub Projects to Look At
