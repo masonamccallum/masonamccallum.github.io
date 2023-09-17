@@ -22,12 +22,13 @@ It is my belief that version control will vastly improve the reach and efficienc
 ## Before the Talk
 - Make sure you have git running on your laptop. [see instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - Brush up on how to use the command line. [Here](https://buildmedia.readthedocs.org/media/pdf/lym/latest/lym.pdf)
+
 ## Attend the Talk
 #### Measuring Stick
 <img src="/images/vcMetalModel.jpeg" width="600"/>
 - [Watch this tutorial](https://www.youtube.com/watch?v=MJUJ4wbFm_A) <sup>Start either at beginning or 15 minutes based on audience comfort</sup>.
 - If the command line interface is not for you, try GitKraken: [GitKraken Website](https://www.gitkraken.com)
-- GitKraken/CLI demo. I will use the CLI in GitKraken. I think this will be a helpful learning tool.
+- `$watch -n 0.1 --color "git log --all --decorate --graph --color --abbrev-commit --pretty=short"`
 
 ## After Talk
 1. Look through the cool GitHub projects mentioned below.
