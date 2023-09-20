@@ -58,3 +58,9 @@ It is my belief that version control will vastly improve the reach and efficienc
 - `git reflog`
 - [gh CLI](https://cli.github.com/manual/gh)
 - [cherry-picking](https://git-scm.com/docs/git-cherry-pick)
+
+## Hot takes
+- Windows Is aweful
+- Stop using Matlab!!
+- Vim is king
+- Make less code comments
