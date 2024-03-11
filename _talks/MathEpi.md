@@ -1,10 +1,9 @@
 ---
 title: Mathematical Epidemiology 
-excerpt: "Exploration of Dynamical behavior of epidemiological model<br/><img src='/images/500x300.png'>"
+excerpt: "Exploration of Dynamical behavior of epidemiological model<br/><img src='https://xkcd.com/2355/'>"
 collection: portfolio
 author: Mason A. McCallum
 ---
-
 
 <div>
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>

@@ -4,11 +4,12 @@ collection: talks
 type: "Talk"
 permalink: /talks/sindy-autoencoder
 venue: "Southern Methodist University, Department of Mathematics"
+excerpt: "<img src='https://royalsocietypublishing.org/cms/asset/36ce25b6-102d-4f3f-8e4d-328bda956484/rspa20230422f01.gif'>"
 date: 2024-11-3
 location: "Dallas, Texas"
 ---
 
-These are rough lecture notes for a paper review discussion held spring 2024 with the SMU data Applied Mathematics/Data Science Journal Club
+These are rough lecture notes for a paper review discussion held spring 2024 with the SMU data Applied Mathematics/Data Science Journal Club. This work is simply a partial account of the content in the Cited paper.
 
 Author: Mason A. McCallum
 
@@ -34,7 +35,7 @@ Each column in the above definition corresponds to applying some mapping to our 
 
 Definition: The coefincent matrix $\xi \in \mathbb{R}^{s \times d}$ is a sparce matrix which we will optimize to satisfy $\dot{X}=\Theta(X)\xi$. This matrix serves as a means of selecting which library functions belong in the model.
 
-$\mathcal{L}_{SINDY}(\xi')=||\dot{X}-\Theta(X)\xi'||_2+\lambda||\xi'||_1$
+$$L_{SINDY}(\xi')=||\dot{X}-\Theta(X)\xi'||_2+\lambda||\xi'||_1$$
 
 
 ```julia
@@ -301,13 +302,13 @@ Time series data will be collected into the Hankel matrix
 $$H=
 \begin{bmatrix}
 &y(t_1) &y(t_2) &\cdot\cdot\cdot &y(t_q)\\
-&y(t_2) &y(t_3) &\cdot\cdot\cdot &y(t_q+1)\\
+&y(t_2) &y(t_3) &\cdot\cdot\cdot &y(t_{q+1})\\
 &\cdot\cdot\cdot &\cdot\cdot\cdot &\cdot\cdot\cdot &\cdot\cdot\cdot\\
-&y(t_n) &y(t_n+1) &\cdot\cdot\cdot &y(t_n+q+1)\\
+&y(t_n) &y(t_{n+1}) &\cdot\cdot\cdot &y(t_{n+q+1})\\
 \end{bmatrix}=[h_1 h_2 \cdot\cdot\cdot h_q]
 $$
 
-The autoencoder network is a mapping from the column space of the H matrix into our latent space.
+The autoencoder network is a mapping from the column space of the H matrix into our latent space. The punchline is from noisy observation data (e.g. just collecting a single dynamical variable) the full dynamics can be discovered after finding the appropriate mapping into latent space. Note that in the paper one can account for noisy data by taking the reduced SVD of the H matrix.
 
 # Warning
 This code is not finished. Not all the Loss functions are implemented therefore our search for the appropriate mapping to latent space is not going to be correct. Most of the bones are there but the loss functions are needed.
