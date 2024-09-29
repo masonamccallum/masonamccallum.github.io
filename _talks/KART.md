@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 permalink: /talks/KART
 venue: "Southern Methodist University, Department of Mathematics"
-excerpt: "<img src='MLPvsKAN.png'>"
+excerpt: "<img src='MLPvsKAN.png' style="heigh:50%;">"
 date: 2025-10-2
 location: "Dallas, Texas"
 ---
