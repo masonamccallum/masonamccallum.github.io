@@ -14,7 +14,8 @@ These are rough lecture notes for a paper review discussion held spring 2024 wit
 Author: Mason A. McCallum
 
 ## Citation
-Bakarji J, Champion K, Nathan Kutz J, Brunton SL. 2023 Discovering governing equations from partial measurements with deep delay autoencoders. Proc. R. Soc. A 479: 20230422. https://doi.org/10.1098/rspa.2023.0422
+[1] Bakarji J, Champion K, Nathan Kutz J, Brunton SL. 2023 Discovering governing equations from partial measurements with deep delay autoencoders. Proc. R. Soc. A 479: 20230422. https://doi.org/10.1098/rspa.2023.0422 <br> 
+[2] Niall M. Mangan, Steven L. Brunton, Joshua L. Proctor, J. Nathan Kutz. Inferring biological networks by sparse identification of nonlinear dynamics. arXiv:1605.08368
 
 ## Introduction to SINDY 
 Here we will empirically determine a mathematical model of observed dynamical variables. To employ this technique we must collect time series data and coorisponding time derivative data. Let $x:\mathbb{R}^+ \rightarrow \mathbb{R}^d$
@@ -292,8 +293,32 @@ plot(ptrue, pmodel, layout=(1,2))
 </svg>
 
 
+# Implicit SINDy
+As an asside I will describe a more general formulation of SINDy. Many mathematical models require rational terms. Such models frequently accur in Mathematical biology. This will be a formulation of SINDy with will allow for more general nonlinearities beyond polynomial or trigonometric functions. we will consider models of the form: $\dot{\bm{x}} = f(\bm{x})$ but here we allow each componont of $\bm{x}$ to be a rational function.
+
+$$
+\dot{x}_k = \frac{f_N(\bm{x})}{f_D(\bm{x})}
+$$
+
+or otherwise writen:
+
+$$
+ f_N(\bm{x})-f_D(\bm{x})\dot{x}_k = 0
+$$
+
+This modivates the construction of a modified library for speices k.
+$$\Theta(X, \dot{x}_k(t))=\left[\Theta_N(X)\;\;\;diag(\dot{x}_k)\Theta_D(X)\right]$$
+
+$$\Theta(X, \dot{x}_k(t))\xi_k = 0$$
+
+This is the data matrix form of our implicit evolution equations. To achieve the disired sparce system of equations we seek a non-zero element of the null space of $\Theta(X, \dot{x}_k(t))$. Let the Matrix N be the matrix whos columns span such a null space. Now we seek the sparsest vector $\xi_k$ in the range of N via alternating direct methods (ADM). We restrict this optimization requiring some threashold $(\lambda)$ minimum magnitude of the vector $\xi_k$. 
+
+"The appropriate $(\lambda)$ is unknown a priori. Each $\xi(\lambda)$ produces an inferred model of varying accuracy and sparsity. from these models we calculate a Pareto front and select tho most parsimonious model... readily identifiable at the sharp drop-off on the error in $\Theta\xi=0$." [2]
+
+We now desire a formulation which does not restsrict one to just rational function nonlienarities but rather results which are some combination of rational nonlinearities, polynomials, and trigonometric functions. 
 
 
+# Autoencoder: coordinate system discovery
 In the above discussion we collected data in the coordinate system of the dynamical variables x,y,z. Suppose however the observed data were not in the dynamical coordinate system. This is akin to developing orbital mechanics before Copernicus suggested a heliocentric coordinate system. The differential equations based on a geocentric coordinate system are very messy. Once Copernicus posited a heliocentric coordinate system the dynamical system became discoverable and led to Kepler's findings. In the following discussion we will observe data from a system. Then in the spirit of Copernicus discover an appropriate coordinate system for the dynamics this will be accomplished using an autoencoder to map our observables into a latent space. Then within that latent space SINDy will play the role of Kepler to discover a dynamical model. Aside from the very general conceptual detail of mathematical modeling in an appropriate coordinate system the interesting details of the autoencoder is the selection of loss functions to constrain the optimization and discover the appropriate mapping from observation space into the dynamical space.
 
 consider the nonlinear differential equation $\frac{d}{dt}x(t)=f(x(t))$ Let $y\in\mathbb{R}^d$ be noisy measurments of the system via some observation operator. $y(t)=g(x(t))+\eta$. For example let g be the projection of the system onto $e_1$. Consider some unkown mapping from measure time delay space to the dynamical variables $z(t)=\phi(y(t))$. Appon finding $\phi$ (via an autoencoder) the goal is to discover the dynamical system $\frac{d}{dt}z(t)=h(z(t))$ (SINDy)
@@ -368,7 +393,6 @@ optim = Flux.setup(Adam(), model)
   end
 end
 ```
-
     [32mProgress: 100%|█████████████████████████████████████████| Time: 0:01:12[39m
 
 
@@ -489,7 +513,7 @@ plot(ptrue, pmodel, layout=(1,2))
 </defs>
 <path clip-path="url(#clip473)" d="M1446.46 161.699 L1446.46 161.699 L1446.46 161.699 L1446.46 161.699 L1446.46 161.699 L1446.46 161.699 L1446.46 161.699  Z" fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
 <polyline clip-path="url(#clip473)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="1531.81,1085.08 1801.06,851.904 1801.06,385.559 "/>
-<polyline clip-path="url(#clip473)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="1616.67,1109.57 1885.92,876.401 1885.92,410.056 "/>
+<polyline clip-path="url(#clip473)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="1616.67,1109.57 1885.92,876.401 1885.92,410.056 "/>
 <polyline clip-path="url(#clip473)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="1701.54,1134.07 1970.78,900.898 1970.78,434.553 "/>
 <polyline clip-path="url(#clip473)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="1786.4,1158.57 2055.64,925.395 2055.64,459.05 "/>
 <polyline clip-path="url(#clip473)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="1871.26,1183.06 2140.5,949.892 2140.5,483.547 "/>
