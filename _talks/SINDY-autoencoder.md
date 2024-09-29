@@ -1,5 +1,5 @@
 ---
-title: "Paper discussion"
+title: "SINDY Paper discussion"
 collection: talks
 type: "Talk"
 permalink: /talks/sindy-autoencoder

@@ -1,10 +1,10 @@
 ---
-title: "Paper discussion"
+title: "KART Paper discussion"
 collection: talks
 type: "Talk"
 permalink: /talks/KART
 venue: "Southern Methodist University, Department of Mathematics"
-excerpt: "<img src='https://royalsocietypublishing.org/cms/asset/36ce25b6-102d-4f3f-8e4d-328bda956484/rspa20230422f01.gif'>"
+excerpt: "<img src='MLPvsKAN.png'>"
 date: 2025-10-2
 location: "Dallas, Texas"
 ---
