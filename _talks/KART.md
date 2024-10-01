@@ -33,6 +33,12 @@ $$
 where 
 $\phi_{q,p}:[0,1]\rightarrow\mathbb{R}$ and $\Phi_q:\mathbb{R}\rightarrow\mathbb{R}$
 
+Note that for the theorem the only restriction on the activation functions is that they are continuous. If one restricts this theorem to smooth functions the theorem no longer holds. The author's claim is while this is true we will add composition to regain what we lost in restricting the activation functions to smooth functions. At this point I feel there is a lot of overhype in KANS. Fundamentaly KANs may have been inspired by the KART theorem however I believe in some sense we have just found our way back to the UAT.
+
+
+![image](bsplinenet.jpg)
+
+
 ## KAN notation
 The shape of a KAN $[n_0, n_1,...,n_L]$. Where $n_i$ is the number of nodes in the $i^{th}$ layer. The $i^{th}$ neuron in the $\ell^{th}$ layer $(\ell, i)$ which has activation value $x_{\ell, i}$. Between Layel $\ell$ and $\ell+1$ there are $n_\ell n_{\ell+1}$ activation functions. Activation functions connecting $(\ell, i)$ and $(\ell+1, j)$ is $\phi_{\ell,j,i}$. $\tilde{x}_{\ell,j,i}=\phi_{\ell,j,i}(x_{\ell,i})$. $x_{\ell+1, j}=\sum_{i=1}^{n_\ell}\tilde{x}_{\ell, j, i}$
 
@@ -65,7 +71,7 @@ $$
 where each one of the $\Phi_{\ell,i,j}$ are $(k+1)$-times continuously differentiable. Then there exists a constant C depending on f and its representation, such that we have the following approximation bound in terms of the grid size G: there exist k-th order B-spline functions $\Phi_{\ell,i,j}^G$ such that for any $0\le m\le k$ we have the bound
 $$
 \begin{equation*}
-||f-(\Phi_{L-1}\circ\Phi_{L-2}\circ\dots\circ\Phi_{1}\circ\Phi_{0})||_{C^m}\le CG^{-k-1+m}
+||f-(\Phi_{L-1}^G\circ\Phi_{L-2}^G\circ\dots\circ\Phi_{1}^G\circ\Phi_{0}^G)||_{C^m}\le CG^{-k-1+m}
 \end{equation*}
 $$
 where
