@@ -24,13 +24,14 @@ Inspired by the Kolmogorov-Arnold representation theorem, we propose Kolmogorov-
 ## Kolmogorov-Arnold Representation Theorem 
 Vladimir Arnold and Andrey Kolmogorov <br>
 If f is a multivariate continuous function on a bounded domain. F can be written as a finite composition of continuous functions of one variable and the Binary operation of addition.<br> 
-For smooth $f:[0,1]^n \rightarrow \mathbb{R}$
+For smooth $f:[0,1]^n \rightarrow \mathbb{R}$<br>
 $$
 \begin{equation*}
   f(x)=f(x_1, x_2,...,x_n) = \sum_{q=1}^{2n+1}\Phi_q\left(\sum_{p=1}^n \phi_{q,p}(x_p)\right)
 \end{equation*}
 $$
-where $\phi_{q,p}:[0,1]\rightarrow\mathbb{R}$ and $\Phi_q:\mathbb{R}\rightarrow\mathbb{R}$
+where 
+$\phi_{q,p}:[0,1]\rightarrow\mathbb{R}$ and $\Phi_q:\mathbb{R}\rightarrow\mathbb{R}$
 
 ## KAN notation
 The shape of a KAN $[n_0, n_1,...,n_L]$. Where $n_i$ is the number of nodes in the $i^{th}$ layer. The $i^{th}$ neuron in the $\ell^{th}$ layer $(\ell, i)$ which has activation value $x_{\ell, i}$. Between Layel $\ell$ and $\ell+1$ there are $n_\ell n_{\ell+1}$ activation functions. Activation functions connecting $(\ell, i)$ and $(\ell+1, j)$ is $\phi_{\ell,j,i}$. $\tilde{x}_{\ell,j,i}=\phi_{\ell,j,i}(x_{\ell,i})$. $x_{\ell+1, j}=\sum_{i=1}^{n_\ell}\tilde{x}_{\ell, j, i}$
@@ -74,6 +75,8 @@ $$
 \end{equation*}
 $$
 
-## KART vs UAT
+
+## external refs 
+https://github.com/mintisan/awesome-kan?tab=readme-ov-file
 
 
